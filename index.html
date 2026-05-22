@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGuard AI | Your Personalized Cybersecurity Mentor</title>
+    <meta name="description" content="CyberGuard AI is a personalized cybersecurity mentor that remembers your progress, weak topics, and learning behavior.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Particle Background -->
+    <div id="particles-js" class="particle-background"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <i class="fa-solid fa-shield-halved neon-icon"></i> CyberGuard <span class="accent-text">AI</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#memory">Memory</a>
+            <a href="#domains">Domains</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#labs">Labs</a>
+            <button class="btn btn-outline" id="loginBtn">Login</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="shield-container">
+                <div class="hologram-effect"></div>
+                <i class="fa-solid fa-shield-virus hero-icon floating"></i>
+            </div>
+            <h1 class="glitch" data-text="Your Personalized AI Cybersecurity Mentor">Your Personalized AI Cybersecurity Mentor</h1>
+            <p>Master Ethical Hacking, Network Security, and Forensics with an AI that adapts to your learning style, remembers your weak points, and builds custom roadmaps.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary glow-effect">Start Learning</button>
+                <button class="btn btn-secondary">Try Demo</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- AI Memory System Dashboard -->
+    <section id="memory" class="section memory-section">
+        <h2 class="section-title">AI Memory <span class="accent-text">System</span></h2>
+        <p class="section-subtitle">Your mentor remembers everything to optimize your learning path.</p>
+        
+        <div class="dashboard-grid">
+            <div class="glass-card stat-card">
+                <i class="fa-solid fa-fire text-orange"></i>
+                <div class="stat-info">
+                    <h3>Learning Streak</h3>
+                    <p class="stat-value" id="streak-counter">0 Days</p>
+                </div>
+            </div>
+            <div class="glass-card stat-card">
+                <i class="fa-solid fa-bullseye text-cyan"></i>
+                <div class="stat-info">
+                    <h3>Quiz Accuracy</h3>
+                    <p class="stat-value" id="accuracy-counter">0%</p>
+                </div>
+            </div>
+            <div class="glass-card stat-card">
+                <i class="fa-solid fa-heart text-pink"></i>
+                <div class="stat-info">
+                    <h3>Favorite Domain</h3>
+                    <p class="stat-value" id="fav-domain">Loading...</p>
+                </div>
+            </div>
+            <div class="glass-card stat-card weak-areas">
+                <h3><i class="fa-solid fa-triangle-exclamation text-yellow"></i> Areas to Improve</h3>
+                <ul id="weak-areas-list">
+                    <li>Loading...</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cybersecurity Domains -->
+    <section id="domains" class="section domains-section">
+        <h2 class="section-title">Cybersecurity <span class="accent-text">Domains</span></h2>
+        
+        <div class="cards-container">
+            <!-- Domain Card 1 -->
+            <div class="domain-card glass-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-user-secret icon-large"></i>
+                    <span class="difficulty hard">Hard</span>
+                </div>
+                <h3>Ethical Hacking</h3>
+                <div class="progress-container">
+                    <div class="progress-bar"><div class="progress" style="width: 45%;"></div></div>
+                    <span>45%</span>
+                </div>
+                <button class="btn btn-card">Continue Learning</button>
+            </div>
+            <!-- Domain Card 2 -->
+            <div class="domain-card glass-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-network-wired icon-large"></i>
+                    <span class="difficulty medium">Medium</span>
+                </div>
+                <h3>Network Security</h3>
+                <div class="progress-container">
+                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                    <span>80%</span>
+                </div>
+                <button class="btn btn-card">Continue Learning</button>
+            </div>
+            <!-- Domain Card 3 -->
+            <div class="domain-card glass-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-code icon-large"></i>
+                    <span class="difficulty easy">Easy</span>
+                </div>
+                <h3>Web Security</h3>
+                <div class="progress-container">
+                    <div class="progress-bar"><div class="progress" style="width: 15%;"></div></div>
+                    <span>15%</span>
+                </div>
+                <button class="btn btn-card">Continue Learning</button>
+            </div>
+            <!-- Domain Card 4 -->
+            <div class="domain-card glass-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-key icon-large"></i>
+                    <span class="difficulty hard">Hard</span>
+                </div>
+                <h3>Cryptography</h3>
+                <div class="progress-container">
+                    <div class="progress-bar"><div class="progress" style="width: 5%;"></div></div>
+                    <span>5%</span>
+                </div>
+                <button class="btn btn-card">Continue Learning</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Personalized Roadmap -->
+    <section id="roadmap" class="section roadmap-section">
+        <h2 class="section-title">Personalized <span class="accent-text">Roadmap</span></h2>
+        
+        <div class="timeline">
+            <div class="timeline-item completed">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <h3>Phishing Basics</h3>
+                    <p>Completed. You scored 95% in the final quiz.</p>
+                </div>
+            </div>
+            <div class="timeline-item active">
+                <div class="timeline-dot glow"></div>
+                <div class="timeline-content glass-card glow-border">
+                    <h3>SQL Injection Lab</h3>
+                    <p>Suggested next task based on your recent weak points in Web Security.</p>
+                    <button class="btn btn-small">Start Lab</button>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <h3>Advanced NMAP Scanning</h3>
+                    <p>Upcoming mini-project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Labs -->
+    <section id="labs" class="section labs-section">
+        <h2 class="section-title">Interactive <span class="accent-text">Labs</span></h2>
+        
+        <div class="cards-container">
+            <div class="lab-card glass-card hover-glow">
+                <i class="fa-solid fa-envelope-open-text lab-icon"></i>
+                <h3>Phishing Simulator</h3>
+                <p>Analyze suspicious emails and identify social engineering vectors.</p>
+            </div>
+            <div class="lab-card glass-card hover-glow">
+                <i class="fa-solid fa-unlock-keyhole lab-icon"></i>
+                <h3>Password Cracker</h3>
+                <p>Learn brute-force and dictionary attacks safely.</p>
+            </div>
+            <div class="lab-card glass-card hover-glow">
+                <i class="fa-solid fa-database lab-icon"></i>
+                <h3>SQLi Demo</h3>
+                <p>Exploit and patch vulnerable database queries.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gamification & Analytics -->
+    <section class="section gamification-section">
+        <div class="split-layout">
+            <div class="gamification glass-card">
+                <h3>Your Achievements</h3>
+                <div class="badges">
+                    <div class="badge"><i class="fa-solid fa-medal silver"></i> <span>First Blood</span></div>
+                    <div class="badge"><i class="fa-solid fa-shield gold"></i> <span>Defensiv Pro</span></div>
+                    <div class="badge locked"><i class="fa-solid fa-lock"></i> <span>Crypto Master</span></div>
+                </div>
+                <div class="xp-bar-container">
+                    <span>Level 4 Hacker</span>
+                    <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                    <span>3000 / 4000 XP</span>
+                </div>
+            </div>
+            <div class="analytics glass-card">
+                <h3>Performance Analytics</h3>
+                <!-- Mock Chart using CSS -->
+                <div class="mock-chart">
+                    <div class="bar-container"><div class="bar" style="height: 40%;"></div><span>Mon</span></div>
+                    <div class="bar-container"><div class="bar" style="height: 60%;"></div><span>Tue</span></div>
+                    <div class="bar-container"><div class="bar" style="height: 80%;"></div><span>Wed</span></div>
+                    <div class="bar-container"><div class="bar" style="height: 50%;"></div><span>Thu</span></div>
+                    <div class="bar-container"><div class="bar" style="height: 95%;"></div><span>Fri</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section tech-stack-section">
+        <h2 class="section-title">Built With</h2>
+        <div class="tech-logos">
+            <span class="tech-tag">Gemini API</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">React (Display)</span>
+            <span class="tech-tag">Tailwind (Display)</span>
+            <span class="tech-tag">Vector DB / Memory Bank</span>
+            <span class="tech-tag">Python FastAPI</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fa-solid fa-shield-halved"></i> CyberGuard AI
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-discord"></i></a>
+            </div>
+            <p>&copy; 2026 CyberGuard AI. Ready for Hackathon.</p>
+        </div>
+    </footer>
+
+    <!-- AI Chat Assistant (Floating) -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header" id="chatHeader">
+            <i class="fa-solid fa-robot"></i> CyberMentor
+            <i class="fa-solid fa-chevron-down" id="chatToggle"></i>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="message ai">
+                <div class="msg-content">Hello! I noticed you struggled with SQL injection. Need a quick recap?</div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Ask about cybersecurity...">
+            <button id="sendMsg"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Login Modal (Hidden by default) -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal-content glass-card">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>Access Terminal</h2>
+            <div class="auth-buttons">
+                <button class="btn btn-google"><i class="fa-brands fa-google"></i> Login with Google</button>
+                <div class="divider"><span>OR</span></div>
+                <input type="email" placeholder="Email Address" class="cyber-input">
+                <input type="password" placeholder="Password" class="cyber-input">
+                <button class="btn btn-primary w-100">Initialize Link</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
